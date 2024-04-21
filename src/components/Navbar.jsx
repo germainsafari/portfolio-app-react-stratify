@@ -36,7 +36,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link to='skills' smooth={true} duration={500}>
-            Skills
+            Specialisation
           </Link>
         </li>
         <li>
@@ -127,7 +127,7 @@ const Navbar = () => {
               className='flex justify-between items-center w-full text-gray-300'
               href='/'
             >
-              Resume <BsFillPersonLinesFill size={30} />
+              Twitter <BsFillPersonLinesFill size={30} />
             </a>
           </li>
         </ul>
