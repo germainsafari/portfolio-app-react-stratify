@@ -28,3 +28,26 @@
         hsla(242, 74%, 61%, 0.8)   
     )!important;
 }
+.service-container {
+    position: relative;
+  }
+  
+  .service-description {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+  }
+  
+  .service-container:hover .service-description {
+    visibility: visible;
+    opacity: 1;
+  }
+  

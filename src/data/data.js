@@ -4,32 +4,25 @@ import RealEst from '../assets/projects/realestate.jpg'
 export const data=[
     {
         id:1,
-        name:"React JS Application",
+        name:"AI Consultation Services",
         image:WorkIm,
         github:"",
         live:"",
     },
     {
         id:2,
-        name:"React JS Application",
+        name:"Autonomous AI Bots Development",
         image:RealEst,
         github:"",
         live:"",
     },
     {
         id:3,
-        name:"React JS Application",
+        name:"Software Development",
         image:WorkIm,
         github:"",
         live:"",
     },
-    {
-        id:4,
-        name:"React JS Application",
-        image:RealEst,
-        github:"",
-        live:"",
-    },
-
+    
 
 ]
