@@ -3,6 +3,9 @@ import React from 'react';
 import Mongo from '../assets/mongo.png';
 import Tailwind from '../assets/tailwind.png';
 import FireBase from '../assets/firebase.png';
+import ai from '../assets/ai.png'
+import people from '../assets/people.png'
+import code from '../assets/code.png'
 
 const Skills = () => {
   return (
@@ -17,7 +20,7 @@ const Skills = () => {
         <div className='w-full flex justify-around py-8'>
           <div className='w-64 text-center'>
             <div className='service-container hover:shadow-lg transform hover:scale-1.05 transition duration-300'>
-              <img className='w-40 mx-auto service-image' src={Mongo} alt="AI Consultation" />
+              <img className='w-40 mx-auto service-image' src={people} alt="AI Consultation" />
               <div className='service-description'>
                 <h3 className='font-bold text-lg mb-2'>AI Consultation Services</h3>
                 <p className='text-sm'>
@@ -28,7 +31,7 @@ const Skills = () => {
           </div>
           <div className='w-64 text-center'>
             <div className='service-container hover:shadow-lg transform hover:scale-1.05 transition duration-300'>
-              <img className='w-40 mx-auto service-image' src={Tailwind} alt="Autonomous AI" />
+              <img className='w-40 mx-auto service-image' src={ai} alt="Autonomous AI" />
               <div className='service-description'>
                 <h3 className='font-bold text-lg mb-2'>Autonomous AI Bots Development</h3>
                 <p className='text-sm'>
@@ -39,7 +42,7 @@ const Skills = () => {
           </div>
           <div className='w-64 text-center'>
             <div className='service-container hover:shadow-lg transform hover:scale-1.05 transition duration-300'>
-              <img className='w-40 mx-auto service-image' src={FireBase} alt="Software Development" />
+              <img className='w-40 mx-auto service-image' src={code} alt="Software Development" />
               <div className='service-description'>
                 <h3 className='font-bold text-lg mb-2'>Software Development</h3>
                 <p className='text-sm'>
