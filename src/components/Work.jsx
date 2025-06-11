@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaRobot, FaCloud, FaCode, FaBrain, FaChartLine, FaTools } from 'react-icons/fa';
 
 const Work = () => {
@@ -8,44 +8,68 @@ const Work = () => {
       name: "AI Consultation & Strategy",
       icon: <FaBrain className="w-16 h-16 mx-auto mb-4" />,
       description: "AI readiness assessment, use case discovery, and strategic roadmapping for your business",
-      category: "AI Consultation"
+      category: "AI Consultation",
+      plnPrice: "2000 PLN",
+      usdPrice: "\$500",
+      details: "2-hr workshop, roadmap, recommendations"
     },
     {
       id: 2,
       name: "Custom ML Solutions",
       icon: <FaRobot className="w-16 h-16 mx-auto mb-4" />,
       description: "Predictive analytics, computer vision, and NLP solutions tailored to your needs",
-      category: "AI Development"
+      category: "AI Development",
+      plnPrice: "8000 PLN",
+      usdPrice: "\$2000",
+      details: "Predictive models, NLP/CV, 3-5 weeks dev time, deployment support"
     },
     {
       id: 3,
       name: "Cloud & MLOps",
       icon: <FaCloud className="w-16 h-16 mx-auto mb-4" />,
       description: "Azure, AWS, and GCP infrastructure setup with MLOps pipelines and CI/CD",
-      category: "Cloud Engineering"
+      category: "Cloud Engineering",
+      plnPrice: "4000 PLN",
+      usdPrice: "\$1000",
+      details: "Azure/AWS/GCP setup, CI/CD, infrastructure audit"
     },
     {
       id: 4,
       name: "Full-Stack Development",
       icon: <FaCode className="w-16 h-16 mx-auto mb-4" />,
       description: "Modern web applications with React, Node.js, and cloud-native architecture",
-      category: "Software Development"
+      category: "Software Development",
+      plnPrice: "6000 PLN",
+      usdPrice: "\$1500",
+      details: "Modern web app, React/Node.js, responsive design"
     },
     {
       id: 5,
       name: "Business Intelligence",
       icon: <FaChartLine className="w-16 h-16 mx-auto mb-4" />,
       description: "Data analytics, visualization, and business process automation",
-      category: "AI Solutions"
+      category: "AI Solutions",
+      plnPrice: "5000 PLN",
+      usdPrice: "\$1250",
+      details: "Analytics dashboards, KPI tracking, process automation"
     },
     {
       id: 6,
       name: "AI Integration",
       icon: <FaTools className="w-16 h-16 mx-auto mb-4" />,
       description: "Seamless integration of AI tools with your existing systems and workflows",
-      category: "Integration"
+      category: "Integration",
+      plnPrice: "3000 PLN",
+      usdPrice: "\$750",
+      details: "Connect AI tools to your software, custom connectors, training included"
     }
   ];
+
+  const [expandedService, setExpandedService] = useState(null);
+
+  const toggleExpanded = (id) => {
+    setExpandedService(expandedService === id ? null : id);
+  };
 
   return (
     <div name='work' className='w-full md:min-h-screen text-gray-300 bg-[#0a192f]'>
@@ -62,7 +86,8 @@ const Work = () => {
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-[#112240] p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-[#112240] p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer"
+              onClick={() => toggleExpanded(service.id)}
             >
               <div className="text-pink-600">
                 {service.icon}
@@ -74,6 +99,18 @@ const Work = () => {
                   {service.category}
                 </span>
               </div>
+              {expandedService === service.id && (
+                <div className="mt-4 pt-4 border-t border-gray-700 text-sm">
+                  <div className="grid grid-cols-2 gap-2 mb-2">
+                    <div className="font-bold">PLN Price:</div>
+                    <div>{service.plnPrice}</div>
+                    <div className="font-bold">USD Price:</div>
+                    <div>{service.usdPrice}</div>
+                  </div>
+                  <div className="font-bold mb-1">Key Details:</div>
+                  <p className="text-gray-400">{service.details}</p>
+                </div>
+              )}
             </div>
           ))}
         </div>

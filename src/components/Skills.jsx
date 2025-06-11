@@ -9,6 +9,34 @@ import code from '../assets/code.png'
 
 const webProjects = [
   {
+    name: 'DocAI',
+    image: require('../assets/projects/docAI.png'),
+    url: 'https://v0-doc-ai-neon.vercel.app/',
+    description: 'AI-powered document analysis and processing platform.',
+    stack: ['Next.js', 'AI', 'TailwindCSS'],
+  },
+  {
+    name: 'AmaziHealth',
+    image: require('../assets/projects/amazihealth.png'),
+    url: 'https://amazihealth.com',
+    description: 'Healthcare management and patient care platform.',
+    stack: ['React', 'Node.js', 'MongoDB'],
+  },
+  {
+    name: 'Admin AI Editor',
+    image: require('../assets/projects/admindaieditor.png'),
+    url: 'https://admindeditor.vercel.app/',
+    description: 'AI-powered content management and editing system.',
+    stack: ['Next.js', 'AI', 'TailwindCSS'],
+  },
+  {
+    name: 'DripClass',
+    image: require('../assets/projects/dripclass.png'),
+    url: 'https://dripclass.io/',
+    description: 'Interactive online learning and course management platform.',
+    stack: ['React', 'Node.js', 'MongoDB'],
+  },
+  {
     name: 'AI Personas',
     image: require('../assets/projects/aipersonas.png'),
     url: 'https://v0-ai-personas-omega.vercel.app/',
